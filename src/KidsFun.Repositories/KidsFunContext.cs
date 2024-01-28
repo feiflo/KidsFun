@@ -16,8 +16,25 @@ namespace KidsFun.Repositories
 
         public DbSet<TaskAssignment> TaskAssignments { get; set; }
 
-        public KidsFunContext()
+        public KidsFunContext(DbContextOptions<KidsFunContext> options)
+        : base(options)
         {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<TaskAssignment>()
+                .HasKey(e => e.Id);
+
+            modelBuilder.Entity<TaskAssignment>()
+                .HasOne(e => e.Kid)
+                .WithMany()
+                .HasForeignKey(e => e.KidId);
+
+            modelBuilder.Entity<TaskAssignment>()
+                .HasOne(e => e.Type)
+                .WithMany()
+                .HasForeignKey(e => e.TypeId);
         }
     }
 }
