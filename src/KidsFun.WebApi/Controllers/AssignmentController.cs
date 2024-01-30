@@ -1,5 +1,7 @@
 using KidsFun.Models;
+using KidsFun.WebApi.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection.Metadata;
 
 namespace KidsFun.WebApi.Controllers
 {
@@ -28,8 +30,7 @@ namespace KidsFun.WebApi.Controllers
         [HttpPost(Name = "GetAssignments")]
         public void Assign(TaskAssignmentDto assignment)
         {
-
-
+            throw new NotImplementedException();
         }
 
     }

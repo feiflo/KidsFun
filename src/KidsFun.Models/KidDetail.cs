@@ -10,6 +10,6 @@ namespace KidsFun.Models
 
         public string? Email { get; set; }
 
-        public int points { get; set; }
+        public int TotoalPoints { get; set; }
     }
 }
