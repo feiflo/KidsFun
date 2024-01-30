@@ -8,7 +8,7 @@ namespace KidsFun.Models
 
         public string Name { get; set; }
 
-        public MailAddress? Email { get; set; }
+        public string? Email { get; set; }
 
         public int TotoalPoints { get; set; }
     }

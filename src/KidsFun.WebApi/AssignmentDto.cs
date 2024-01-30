@@ -1,12 +1,12 @@
 namespace KidsFun.WebApi
 {
-    public class AssignmentDto
+    public class TaskAssignmentDto
     {
         public DateTime Due { get; set; }
+        public DateTime Created { get; set; }
 
-        public string AssignmentName { get; set; }
+        public int AssigneeId { get; set; }
 
-        public int Points { get; set; }
-
+        public int TaskTypeId { get; set; }
     }
 }
