@@ -1,4 +1,5 @@
 using KidsFun.Models;
+using KidsFun.WebApi.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection.Metadata;
 
@@ -29,11 +30,7 @@ namespace KidsFun.WebApi.Controllers
         [HttpPost(Name = "GetAssignments")]
         public void Assign(TaskAssignmentDto assignment)
         {
-
-
-                _logger.LogInformation("Load all assignments in the database");
-                return query.Select(d=> new AssignmentDto { AssignmentName = d.Type.Name, Due = d.Due, Points = 888 }).ToList();
-            }
+            throw new NotImplementedException();
         }
 
     }
